@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== "production") {
-  require("dotenv").load();
+  //   require("dotenv").load();
   // require the env
 }
 let express = require("express");
@@ -26,7 +26,7 @@ mongoose.connect(process.env.DATABASE_URL, {
   //   Mongoose uses a older way that is deprecated so you need this
 });
 // Check if connected
-let db = mongoose.connection();
+const db = mongoose.connection();
 db.on("error", error => console.log(error));
 db.once("open", () => console.log("Connected to Mongoose"));
 
