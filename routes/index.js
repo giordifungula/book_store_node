@@ -5,5 +5,8 @@ let router = express.Router();
 // Getting info from the server
 
 router.get("/", (req, res) => {
-  res.send("We are sending to the Server");
+  res.render("index");
 });
+// Application has to be imported into the server
+
+module.exports = router;
