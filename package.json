@@ -1,0 +1,29 @@
+{
+  "name": "book_store_node",
+  "version": "1.0.0",
+  "description": "building a full stack book application",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.5.14",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giordifungula/book_store_node.git"
+  },
+  "author": "Giordi Fungula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giordifungula/book_store_node/issues"
+  },
+  "homepage": "https://github.com/giordifungula/book_store_node#readme"
+}
