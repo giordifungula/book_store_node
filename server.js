@@ -11,6 +11,7 @@ let expressLayouts = require("express-ejs-layouts");
 
 let indexRouter = require("./routes/index");
 // index will need to be import the index file will open on browser
+let authorRouter = require("./routes/authors");
 
 // Configure the application
 app.set("view engine", "ejs");
@@ -33,5 +34,7 @@ db.once("once", () => console.log("Conneted to Mongoose"));
 
 // set the index router
 app.use("/", indexRouter);
+// Set the author routes
+app.use("/authors", authorRouter);
 
 app.listen(process.env.PORT || 3000);
