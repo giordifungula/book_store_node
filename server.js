@@ -9,6 +9,9 @@ let app = express();
 let expressLayouts = require("express-ejs-layouts");
 // express layouts
 
+let bodyParser = require("body-parser");
+// Express will handle post request with this
+
 let indexRouter = require("./routes/index");
 // index will need to be import the index file will open on browser
 let authorRouter = require("./routes/authors");
@@ -21,6 +24,8 @@ app.set("layout", "layouts/layout");
 app.use(expressLayouts);
 app.use(express.static("public"));
 // Folder which will store data
+// How to use body parser
+app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
 // Database Stores
 const mongoose = require("mongoose");
