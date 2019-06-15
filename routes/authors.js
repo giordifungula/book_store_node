@@ -2,6 +2,8 @@ let express = require("express");
 
 let router = express.Router();
 
+let Author = require("../models/author");
+
 // ALl Authors Route
 
 router.get("/", (req, res) => {
@@ -10,7 +12,11 @@ router.get("/", (req, res) => {
 
 // New Author route
 router.get("/new", (req, res) => {
-  res.render("authors/new");
+  res.render("authors/new"),
+    {
+      author: new Author()
+      // creates a new author from database
+    };
 });
 
 // Creating th author route
